@@ -1,0 +1,66 @@
+import React, { Component } from "react";
+import { NavLink, Link } from "react-router-dom";
+import Logo from "../../assets/LA-logo.png";
+import "./Navbar.css";
+
+export class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navCollapsed: true
+    };
+  }
+
+  _onToggleNav = () => {
+    this.setState({ navCollapsed: !this.state.navCollapsed });
+  };
+
+  render() {
+    return (
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <Link to="/" className="navbar-brand">
+          <img src={Logo} className="logo" alt="Lucas Arvelo Logo" />
+          Lucas Arvelo
+        </Link>
+        <button
+          className="navbar-toggler mx-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={this._onToggleNav}
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div
+          className={
+            (this.state.navCollapsed ? "collapse" : "") + " navbar-collapse"
+          }
+          id="navbarNav"
+        >
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item">
+              <NavLink exact to="/" className="nav-item nav-link">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/about" className="nav-item nav-link">
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-item nav-link">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    );
+  }
+}
+
+export default Navbar;
