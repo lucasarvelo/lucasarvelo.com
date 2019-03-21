@@ -1,9 +1,11 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import WelcomePicture from "../WelcomePicture/WelcomePicture";
+import WelcomeMenssage from "../WelcomeMenssage/WelcomeMenssage";
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <React.Fragment>
+      <WelcomePicture />
+      <WelcomeMenssage />
+    </React.Fragment>
   );
 }

@@ -17,7 +17,7 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
         <Link to="/" className="navbar-brand">
           <img src={Logo} className="logo" alt="Lucas Arvelo Logo" />
           Lucas Arvelo
@@ -38,9 +38,9 @@ export class Navbar extends Component {
           className={
             (this.state.navCollapsed ? "collapse" : "") + " navbar-collapse"
           }
-          id="navbarNav"
+          id="navbar"
         >
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav mx-auto text-monospace font-weight-bold">
             <li className="nav-item">
               <NavLink exact to="/" className="nav-item nav-link">
                 Home
