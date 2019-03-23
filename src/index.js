@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import "bootstrap/dist/css/bootstrap.css";
+import "./index.scss";
+import "./assets/scss/bootstrap4_custom.scss";
+import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
