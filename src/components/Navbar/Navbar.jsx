@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../../assets/LA-logo.png";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 export class Navbar extends Component {
   constructor(props) {
@@ -17,13 +17,13 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm sticky-top navbar-dark bg-dark mb-3">
         <Link to="/" className="navbar-brand">
           <img src={Logo} className="logo" alt="Lucas Arvelo Logo" />
           Lucas Arvelo
         </Link>
         <button
-          className="navbar-toggler mx-auto"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -40,19 +40,19 @@ export class Navbar extends Component {
           }
           id="navbar"
         >
-          <ul className="navbar-nav mx-auto text-monospace font-weight-bold">
+          <ul className="navbar-nav text-monospace font-weight-bold ">
             <li className="nav-item">
-              <NavLink exact to="/" className="nav-item nav-link">
+              <NavLink exact to="/" className="nav-item nav-link m-3">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/about" className="nav-item nav-link">
+              <NavLink to="/about" className="nav-item nav-link m-3">
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-item nav-link">
+              <NavLink to="/contact" className="nav-item nav-link m-3">
                 Contact
               </NavLink>
             </li>
