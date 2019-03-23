@@ -2,26 +2,26 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import posed, { PoseGroup } from "react-pose";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import "./App.css";
+import Home from "./views/Home/Home";
+import Projects from "./views/Projects/Projects";
+import Contact from "./views/Contact/Contact";
+import "./App.scss";
 
 const RouteContainer = posed.div({
-  enter: { opacity: 1, delay: 300, beforeChildren: true },
+  enter: { opacity: 1, delay: 150, beforeChildren: true },
   exit: { opacity: 0 }
 });
 
 const App = () => (
   <Route
     render={({ location }) => (
-      <div>
+      <div className="container-fluid p-0">
         <Navbar />
         <PoseGroup>
           <RouteContainer key={location.pathname}>
             <Switch location={location}>
               <Route exact path="/" component={Home} key="home" />
-              <Route path="/about" component={About} key="about" />
+              <Route path="/projects" component={Projects} key="projects" />
               <Route path="/contact" component={Contact} key="contact" />
             </Switch>
           </RouteContainer>
