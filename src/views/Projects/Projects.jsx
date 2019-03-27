@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Projects() {
+const Projects = () => {
   return <div />;
-}
+};
+
+export default Projects;
