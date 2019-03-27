@@ -47,10 +47,13 @@ export class Navbar extends Component {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/about" className="nav-item nav-link m-3">
-                About
+              <NavLink to="/projects" className="nav-item nav-link m-3">
+                Projects
               </NavLink>
             </li>
+            <NavLink to="/blog" className="nav-item nav-link m-3">
+              Blog
+            </NavLink>
             <li className="nav-item">
               <NavLink to="/contact" className="nav-item nav-link m-3">
                 Contact
